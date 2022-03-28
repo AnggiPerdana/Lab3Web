@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lanjutan</title>
+</head>
+<body>
+    <header>
+        <h1>Membuat Form</h1>
+    </header>
+</body>
+
+<style>
+    form p > label {
+        display: inline-block;
+        width: 100px;
+    }
+    form input[type="text"], form textarea {
+        border: 1px solid #197a41;
+    }
+    form input[type="submit"] {
+        border: 1px solid #197a41;
+        background-color: #197a41;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 5px 15px;
+    }
+</style>
+
+<form action="proses.php" method="post">
+    <fieldset>
+        <legend>Data Mahasiswa</legend>
+        <p>
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama">
+        </p>
+        <p>
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim">
+        </p>
+        <p>
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" cols="20" rows="3"></textarea>
+        </p>
+        <p>
+            <label for="fakultas anda">Fakultas Anda</label>
+            <select>
+            <option selected>--Pilih Fakultas Anda--</option>
+            <optgroup label="Fakultas Teknik">
+                <option>Teknik Informatika</option>
+                <option>Teknik Industri</option>
+                <option>Teknik Lingkungan</option>
+            </optgroup>
+            <optgroup label="Fakultas dan Bisnis">
+                <option>Akuntansi</option>
+                <option>Manajemen</option>
+                <option>Bisnis Digital</option>
+            </optgroup>
+            </select><br><br>
+        </p>
+        <p>
+            <label for="hobi">Hobi</label>
+            <input id="jk_membaca" type="checkbox" name="hobi" value="Membaca" /><label for="jk_membaca">Membaca</label>
+            <input id="jk_olahraga" type="checkbox" name="hobi" value="Olahraga" /><label for="jk_olahraga">Olahraga</label>
+            <input id="jk_nonton" type="checkbox" name="hobi" value="Nonton" /><label for="jk_nonton">Nonton</label>
+            <input id="jk_berenang" type="checkbox" name="hobi" value="Berenang" /><label for="berenang">Berenang</label>
+        </p>
+        <p>
+            <label>Jenis Kelamin</label>
+            <input id="jk_l" type="radio" name="kelamin" value="L" /><label for="jk_l">Laki-laki</label>
+            <input id="jk_p" type="radio" name="kelamin" value="P" /><label for="jk_p">Perempuan</label>
+        </p>
+        <p><input type="submit" value="Login"></p>
+    </fieldset>
+</form>
+</html>
